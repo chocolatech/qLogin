@@ -5,7 +5,7 @@ $(document).ready(function () {
     //  }
 
 
-    $('button').on('click', function () {
+    $('.login-form').find('button').on('click', function () {
         window.location.replace('/home.html');
         // window.location.replace('/error500.html');
         // window.location.replace('/index.html');
