@@ -11,5 +11,9 @@ $(document).ready(function () {
         // window.location.replace('/index.html');
     });
 
+    function goBack() {
+        window.history.back();
+    }
+
 
 });
