@@ -12,15 +12,16 @@ $(document).ready(function () {
         });
 
         $.post('/login', values, function (data) {
-            console.log(data);
 
         })
-            .done(function () {
-                window.location.replace('/home.html');
-
+            .done(function (response) {
+                 window.location.replace('/home.html');
+                 $.get('/userInfo', function(d){
+                    // $( ".result" ).html( d );
+                    console.log(d);
+                 });
             })
             .fail(function (response) {
-                console.log(response);
                 if (response.status === 500) {
                     window.location.replace('/error500.html');
                 }
@@ -28,7 +29,6 @@ $(document).ready(function () {
                     $('#alert').show();
                 }
             });
-
 
     });
 
