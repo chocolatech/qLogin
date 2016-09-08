@@ -6,11 +6,9 @@ $(document).ready(function () {
 
 
     $('button').on('click', function () {
-        window.location.replace("http://stackoverflow.com");
-    });
-
-    $.router.add("/signin", function(){
-        alert('You have successfully defined the function!'); 
+        window.location.replace('/home.html');
+        // window.location.replace('/error500.html');
+        // window.location.replace('/index.html');
     });
 
 
