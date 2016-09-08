@@ -19,5 +19,12 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "jquery": "^3.1.0"
+  },
+   "devDependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "gulp": "^3.9.1",
+    "gulp-livereload": "^3.8.1",
+    "run-sequence": "^1.2.2"
   }
 }

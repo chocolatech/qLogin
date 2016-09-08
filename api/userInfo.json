@@ -1,0 +1,6 @@
+{
+    "username": "Rob",
+    "status": "active",
+    "permissions": ["read", "write", "modify"]
+
+}

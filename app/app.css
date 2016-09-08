@@ -1,0 +1,25 @@
+html, body{
+    background-color: #F5F5F5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    }
+login-screen {
+    height: 100%;
+}
+
+.login-form {
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #03A9F4;
+}
+
+.login-form button {
+    margin: auto;
+}
+input[type="password"] {
+    font:small-caption;
+    font-size:16px;
+}
