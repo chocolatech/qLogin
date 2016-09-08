@@ -6,14 +6,38 @@ $(document).ready(function () {
 
 
     $('.login-form').find('button').on('click', function () {
-        window.location.replace('/home.html');
-        // window.location.replace('/error500.html');
-        // window.location.replace('/index.html');
+
+        var inputs = $('.login-form').find('input');
+        var values = {};
+        var alert = document.getElementById('alert').innerHTML;
+        
+
+        inputs.each(function () {
+            values[this.name] = $(this).val();
+        });
+
+        $.post('/login', values, function (data) {
+            console.log(data);
+        })
+            .done(function () {
+                window.location.replace('/home.html');
+                $('#alert').alert('close')
+
+            })
+            .fail(function (response) {
+                console.log(response);
+                if (response.status === 500) {
+                    window.location.replace('/error500.html');
+                }
+                else if (response.status === 401) {
+                    window.location.replace('/index.html');
+            }
+            });
+
+
     });
 
-    function goBack() {
-        window.history.back();
-    }
+
 
 
 });
