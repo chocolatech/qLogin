@@ -6,7 +6,6 @@ $(document).ready(function () {
         var inputs = $('.login-form').find('input');
         var values = {};
 
-
         inputs.each(function () {
             values[this.name] = $(this).val();
         });

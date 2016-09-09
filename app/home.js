@@ -7,10 +7,4 @@ $(document).ready(function () {
         });
         console.log(result);
     });
-
-    // $.getJSON('/userInfo').then(function (result) {
-    //     $("h2").append(result.userName + " ");
-    //     console.log(result);
-    // });
-
 });
