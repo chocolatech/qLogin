@@ -1,5 +1,5 @@
 $(document).ready(function () {
- 
+
     $('#alert').hide();
     $('.login-form').find('button').on('click', function () {
 
@@ -15,11 +15,8 @@ $(document).ready(function () {
 
         })
             .done(function (response) {
-                 window.location.replace('/home.html');
-                 $.get('/userInfo', function(d){
-                    // $( ".result" ).html( d );
-                    console.log(d);
-                 });
+                
+                window.location.replace('/home.html');
             })
             .fail(function (response) {
                 if (response.status === 500) {
@@ -31,8 +28,5 @@ $(document).ready(function () {
             });
 
     });
-
-
-
 
 });
